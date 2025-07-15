@@ -1,0 +1,5 @@
+# for neovim plugin development
+dev.lua
+
+# Lil backup from before i switch to blink.cmp
+.bak/
