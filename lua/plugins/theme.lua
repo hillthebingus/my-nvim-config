@@ -3,7 +3,7 @@ return {
 	-- evergarden
 	{
 		'comfysage/evergarden',
-		priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+		lazy = true,
 		opts = {
 			transparent_background = true,
 			contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
@@ -19,8 +19,7 @@ return {
 	-- gruvbox-material
 	{
 		'sainnhe/gruvbox-material',
-		lazy = false,
-		priority = 1000,
+		lazy = true,
 		config = function()
 			vim.g.gruvbox_material_foreground = "original"
 			vim.g.gruvbox_material_enable_italic = true
@@ -30,8 +29,7 @@ return {
 	{
 		"zenbones-theme/zenbones.nvim",
 		dependencies = "rktjmp/lush.nvim",
-		lazy = false,
-		priority = 1000,
+		lazy = true,
 		config = function()
 			vim.g.zenbones_darken_comments = 45
 		end
@@ -39,8 +37,7 @@ return {
 	-- cyberdream
 	{
 		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
+		lazy = true,
 		config = function()
 			require("cyberdream").setup({
 				transparent = true,
@@ -52,6 +49,7 @@ return {
 	-- vague
 	{
 		"vague2k/vague.nvim",
+		lazy = true,
 		config = function()
 			require("vague").setup({
 			})

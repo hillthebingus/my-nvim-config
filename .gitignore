@@ -3,3 +3,10 @@ dev.lua
 
 # Lil backup from before i switch to blink.cmp
 .bak/
+
+# I hate npm, with a burning passion
+node_modules/
+package*.json
+
+# Cuz i struggle a lot with commit messages ok :sob
+commitlint.*

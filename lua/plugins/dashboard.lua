@@ -2,7 +2,7 @@ return {
 	"nvimdev/dashboard-nvim",
 	event = "VimEnter",
 	config = function()
-		require("ibl").setup_buffer(0, { enabled = false })
+		-- require("ibl").setup_buffer(0, { enabled = false })
 		require("dashboard").setup({
 			theme = "hyper",
 			shortcut_type = "number",

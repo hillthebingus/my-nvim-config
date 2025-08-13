@@ -11,4 +11,3 @@ vim.diagnostic.config({
 
 -- Set colorschemes.
 vim.cmd.colorscheme("rose-pine-moon")
-

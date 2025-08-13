@@ -5,5 +5,7 @@ return {
 		options = {
 			theme = "auto"
 		}
-	}
+	},
+	lazy = true,
+	event = "LspAttach",
 }

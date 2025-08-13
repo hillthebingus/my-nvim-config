@@ -10,4 +10,6 @@ return {
 			indent = { enable = true },
 		})
 	end,
+	lazy = true,
+	event = "BufReadPost *.*",
 }
