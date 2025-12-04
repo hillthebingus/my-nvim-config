@@ -8,5 +8,4 @@ dev.lua
 node_modules/
 package*.json
 
-# Cuz i struggle a lot with commit messages ok :sob
-commitlint.*
+syntax/

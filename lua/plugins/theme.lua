@@ -2,13 +2,15 @@
 return {
 	-- evergarden
 	{
-		'comfysage/evergarden',
-		lazy = true,
-		opts = {
-			transparent_background = true,
-			contrast_dark = 'medium', -- 'hard'|'medium'|'soft'
-			overrides = {},  -- add custom overrides
-		},
+		"comfysage/evergarden",
+		lazy = false,
+		config = function()
+			require("evergarden").setup({
+				transparent_background = true,
+				contrast_dark = "soft", -- 'hard'|'medium'|'soft'
+				overrides = {}, -- add custom overrides
+			})
+		end,
 	},
 	-- rose-pine
 	{
@@ -18,26 +20,28 @@ return {
 
 	-- gruvbox-material
 	{
-		'sainnhe/gruvbox-material',
-		lazy = true,
+		"sainnhe/gruvbox-material",
+		priority = 1000,
+		lazy = false,
 		config = function()
-			vim.g.gruvbox_material_foreground = "original"
+			vim.g.gruvbox_material_foreground = "material"
+			vim.g.gruvbox_material_background = "soft"
 			vim.g.gruvbox_material_enable_italic = true
-		end
+		end,
 	},
 	-- Zenbones
 	{
 		"zenbones-theme/zenbones.nvim",
 		dependencies = "rktjmp/lush.nvim",
-		lazy = true,
+		lazy = false,
 		config = function()
 			vim.g.zenbones_darken_comments = 45
-		end
+		end,
 	},
 	-- cyberdream
 	{
 		"scottmckendry/cyberdream.nvim",
-		lazy = true,
+		lazy = false,
 		config = function()
 			require("cyberdream").setup({
 				transparent = true,
@@ -49,12 +53,32 @@ return {
 	-- vague
 	{
 		"vague2k/vague.nvim",
-		lazy = true,
+		lazy = false,
 		config = function()
-			require("vague").setup({
-			})
-		end
+			require("vague").setup({})
+		end,
 	},
-
+	{
+		"ficcdaf/ashen.nvim",
+		lazy = false,
+	},
+	{
+		"gbprod/nord.nvim",
+		lazy = false,
+		config = function()
+			require("nord").setup({})
+		end,
+	},
+	{
+		"marko-cerovac/material.nvim",
+		lazy = false,
+	},
+	{
+		"olimorris/onedarkpro.nvim",
+		lazy = false,
+	},
+	{
+		"danilo-augusto/vim-afterglow",
+		lazy = false,
+	},
 }
-

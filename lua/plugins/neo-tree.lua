@@ -16,5 +16,5 @@ return {
 		vim.keymap.set("n", "<leader>,.", ":Neotree dir=/home/hillzingus/<CR>")
 	end,
 	lazy = true,
-	event = "BufReadPost *.*"
+	event = { "BufReadPost *.*", "LspAttach" },
 }

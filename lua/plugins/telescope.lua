@@ -35,7 +35,7 @@ return {
 	end,
 	lazy = true,
 	keys = {
-		{ "<C-p>" },
-		{ "<C-l>" },
-	},
+		"<C-p>",
+		"<C-l>",
+	}
 }
