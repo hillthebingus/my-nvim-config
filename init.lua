@@ -2,33 +2,13 @@ require("config.lazy")
 require("config.opts")
 require("config.autocmd")
 require("config.keymaps")
+require("config.lsp_servers")
 
 -- Honestly, just keep this flam here idc
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_lines = true,
 })
 
 -- Set colorschemes.
--- vim.g.material_style = "oceanic"
-vim.cmd.colorscheme("ashen")
+vim.cmd.colorscheme("vague")
 
-vim.g.servers = {
-	lua_ls = {},
-	spyglassmc_language_server = {},
-	gopls = {},
-	bashls = {},
-	clangd = {
-		filetypes = { "c", "h" },
-	},
-	cmake = {},
-	html = {},
-	cssls = {},
-	ts_ls = {},
-	jsonls = {},
-	pyright = {},
-	lemminx = {},
-}
-
-for server, config in pairs(vim.g.servers) do
-	vim.lsp.enable(server)
-end

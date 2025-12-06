@@ -63,7 +63,7 @@ return {
 					{
 						icon = "🌹 ",
 						icon_hl = "Title",
-						desc = "Browse Colorscheme",
+						desc = "Browse Colorschemes!",
 						desc_hl = "String",
 						key = "c",
 						key_hl = "Number",
