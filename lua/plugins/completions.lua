@@ -4,6 +4,7 @@ return {
 
 	dependencies = {
 		"rafamadriz/friendly-snippets",
+		"nvim-mini/mini.icons",
 	},
 
 	version = "1.*",
@@ -20,9 +21,25 @@ return {
 				auto_show = true,
 				border = "rounded",
 				draw = {
-					columns = {
-						{ "label", "label_description", gap = 1 },
-						{ "kind_icon", "kind", gap = 1 },
+					components = {
+						kind_icon = {
+							text = function(ctx)
+								local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+								return kind_icon
+							end,
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
+						},
+						kind = {
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
+						},
 					},
 				},
 			},
@@ -32,25 +49,20 @@ return {
 			},
 
 			ghost_text = {
-				enabled = true
-			}
+				enabled = true,
+			},
 		},
 		signature = {
 			enabled = true,
 			trigger = {
-				-- Show the signature help automatically
 				enabled = true,
-				-- Show the signature help window after typing any of alphanumerics, `-` or `_`
 				show_on_keyword = true,
-				-- Show the signature help window when entering insert mode
 				show_on_insert = false,
-				-- Show the signature help window when the cursor comes after a trigger character when entering insert mode
-				show_on_insert_on_trigger_character = false,
 			},
 			window = {
 				border = "rounded",
-				show_documentation = true
-			}
+				show_documentation = true,
+			},
 		},
 
 		sources = {
@@ -62,4 +74,3 @@ return {
 
 	opts_extend = { "sources.default" },
 }
-

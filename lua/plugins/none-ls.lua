@@ -2,7 +2,6 @@ return {
 	"nvimtools/none-ls.nvim",
 	lazy = true,
 	event = { "LspAttach", "FileType gitcommit" },
-
 	config = function()
 		local null_ls = require("null-ls")
 		null_ls.setup({
@@ -14,10 +13,10 @@ return {
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.shfmt,
+				null_ls.builtins.formatting.cmake_format,
 
 				-- Linters
 				null_ls.builtins.diagnostics.commitlint,
-				null_ls.builtins.diagnostics.cmake_lint,
 				null_ls.builtins.diagnostics.markuplint,
 
 			},

@@ -2,11 +2,11 @@
 local function buffer_message()
 	local msg_table = {
 		"Segmentation fault (core dumped) 💔",
-		"Praise the lord.",
+		"Praise God.",
 		"Interesting... Very, very interesting...",
 		"Human.. I remember you're genocides...",
 		"✝️",
-		"John 3:16: For God so loved the world...",
+		"For God so loved the world...",
 	}
 	math.randomseed()
 	vim.b.session_index = (vim.b.session_index or math.random(#msg_table))

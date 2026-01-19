@@ -1,9 +1,14 @@
 -- This file just enables all lsp servers.
 
+-- Vim moment.
+vim.g.c_syntax_for_h = 1
 -- Extended configs.
 vim.g.configs = {
 	clangd = {
 		filetypes = { "c", "h" },
+	},
+	lua_ls = {
+		filetypes = { "lua" },
 	},
 }
 
@@ -13,7 +18,7 @@ vim.g.servers = {
 	"gopls",
 	"bashls",
 	"clangd",
-	"cmake",
+	"neocmake",
 	"html",
 	"cssls",
 	"ts_ls",
