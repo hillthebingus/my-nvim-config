@@ -3,6 +3,7 @@ require("config.opts")
 require("config.autocmd")
 require("config.keymaps")
 require("config.lsp_servers")
+require("config.godot_server_mode")
 
 -- Honestly, just keep this flam here idc
 vim.diagnostic.config({
@@ -11,4 +12,3 @@ vim.diagnostic.config({
 
 -- Set colorschemes.
 vim.cmd.colorscheme("vague")
-

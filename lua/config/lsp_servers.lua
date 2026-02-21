@@ -4,6 +4,7 @@
 vim.g.c_syntax_for_h = 1
 -- Extended configs.
 vim.g.configs = {
+	gdscript = {},
 	clangd = {
 		filetypes = { "c", "h" },
 	},
@@ -25,6 +26,7 @@ vim.g.servers = {
 	"jsonls",
 	"pyright",
 	"lemminx",
+	"gdscript"
 }
 
 -- Updating the configuration for the servers listed in configs.
