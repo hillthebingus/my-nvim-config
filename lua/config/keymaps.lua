@@ -30,9 +30,10 @@ end)
 
 -- Traversing the codebase easier.
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references)
-vim.keymap.set("n", "<leader>gd", vim.lsp.buf.declaration)
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>gt", vim.lsp.buf.type_definition)
-vim.keymap.set("n", "<leader>gi", vim.lsp.buf.incoming_calls)
+vim.keymap.set("n", "<leader>gc", vim.lsp.buf.incoming_calls)
 vim.keymap.set("n", "<leader>go", vim.lsp.buf.outgoing_calls)
 
 -- For formatting \echo "[row in ascii banner]";\ into \"[row in ascii banner]",\ only gets set in dashboard.lua
