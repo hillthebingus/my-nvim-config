@@ -81,4 +81,9 @@ return {
 		"danilo-augusto/vim-afterglow",
 		lazy = false,
 	},
+	{
+		"xero/miasma.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 }

@@ -14,6 +14,7 @@ return {
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.shfmt,
 				null_ls.builtins.formatting.cmake_format,
+				null_ls.builtins.formatting.gdformat,
 
 				-- Linters
 				null_ls.builtins.diagnostics.commitlint,

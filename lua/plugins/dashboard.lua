@@ -49,7 +49,7 @@ return {
 						end,
 					},
 					{
-						icon = "🗐 ",
+						icon = "🗐  ",
 						icon_hl = "Title",
 						desc = "Grep Project",
 						desc_hl = "String",

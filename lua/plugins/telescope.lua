@@ -1,7 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.8",
-	-- or                              , branch = '0.1.x',
+	version = "*",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		-- Setup.
@@ -11,6 +10,7 @@ return {
 				file_ignore_patterns = {
 					"^.git/",
 					"^build/",
+					"%.uid",
 				},
 			},
 		})
@@ -20,6 +20,12 @@ return {
 
 		vim.keymap.set("n", "<C-p>", function()
 			builtin.find_files({
+				hidden = true,
+			})
+		end)
+
+		vim.keymap.set("n", "<leader>p", function()
+			builtin.oldfiles({
 				hidden = true,
 			})
 		end)
@@ -37,5 +43,6 @@ return {
 	keys = {
 		"<C-p>",
 		"<C-l>",
+		"<leader>p",
 	}
 }

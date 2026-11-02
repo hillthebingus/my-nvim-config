@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
 	config = function()
 		require("nvim-treesitter.config").setup({
 			build = ":TSUpdate",
@@ -10,6 +11,4 @@ return {
 			indent = { enable = true },
 		})
 	end,
-	lazy = true,
-	event = "BufReadPost *.*",
 }

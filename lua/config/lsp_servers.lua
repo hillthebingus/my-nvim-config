@@ -2,9 +2,19 @@
 
 -- Vim moment.
 vim.g.c_syntax_for_h = 1
+
 -- Extended configs.
 vim.g.configs = {
 	gdscript = {},
+	spyglassmc = {
+		filetypes = { "mcfunction" },
+		root_markers = {".git", "pack.mcmeta", "."}
+	},
+	taplo = {
+		cmd = { "taplo", "lsp", "stdio" },
+		filetypes = { "toml" },
+		root_markers = { ".taplo.toml", "taplo.toml", ".git", "." },
+	},
 	clangd = {
 		filetypes = { "c", "h" },
 	},
@@ -26,7 +36,11 @@ vim.g.servers = {
 	"jsonls",
 	"pyright",
 	"lemminx",
-	"gdscript"
+	"gdscript",
+	"taplo",
+	"spyglassmc",
+	"mesonlsp",
+	"make",
 }
 
 -- Updating the configuration for the servers listed in configs.

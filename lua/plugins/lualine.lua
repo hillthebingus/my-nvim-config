@@ -29,6 +29,10 @@ return {
 					mode = 1,
 					separator = { left = "", right = "" },
 					max_length = vim.o.columns,
+					tabs_color = {
+						active = { bg = "#B6B6DA", gui = "italic,bold" },
+						inactive = { bg = "#1E1E27", fg = "#A1A1AA", gui = "" },
+					},
 				},
 			},
 		}
